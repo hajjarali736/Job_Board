@@ -1,0 +1,110 @@
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.nav-link {
+  color: #6c757d;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.hero {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+h1 {
+  color: #212529;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-bar button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.featured-jobs,
+.top-companies {
+  margin-top: 40px;
+}
+
+.job-card,
+.company-card {
+  background-color: #ffffff;
+  border: 1px solid #6c757d;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover,
+.company-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.job-title,
+.company-name {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.job-company,
+.company-industry {
+  color: #6c757d;
+}
+
+.job-location {
+  color: #28a745;
+}
+
+.job-filters h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.job-filters ul li {
+  margin-bottom: 10px;
+}
+
+.job-filters ul li a {
+  color: #6c757d;
+}
+
+.job-filters ul li a:hover {
+  color: #007bff;
+}
+
+footer {
+  color: #f8f9fa;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #007bff !important;
+}
+

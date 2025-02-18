@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profiles - JobSeeker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/placeholder.svg?height=30&width=120" alt="JobSeeker Logo" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="companies.html">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="post-job.html">Post a Job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Explore Companies</h1>
+
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form id="company-search-form">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="company-name" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company-name" placeholder="Enter company name">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="industry" class="form-label">Industry</label>
+                                <select class="form-select" id="industry">
+                                    <option value="">All Industries</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Retail">Retail</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter location">
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button type="submit" class="btn btn-primary w-100">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="company-list" class="row g-4">
+            <!-- Company profiles will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer class="bg-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 JobSeeker. All rights reserved.</p>
+            <div class="mt-2">
+                <a href="#" class="text-decoration-none me-2">Privacy Policy</a>
+                <a href="#" class="text-decoration-none me-2">Terms of Service</a>
+                <a href="#" class="text-decoration-none">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./data/companies-data.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const companyList = document.getElementById("company-list");
+            const searchForm = document.getElementById("company-search-form");
+
+            function displayCompanies(companiesToShow) {
+                companyList.innerHTML = "";
+                companiesToShow.forEach((company) => {
+                    const companyCard = document.createElement("article");
+                    companyCard.className = "col-md-6 col-lg-4";
+                    companyCard.innerHTML = `
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="${company.logo}" alt="${company.name} logo" class="me-3" width="80" height="80">
+                                    <h2 class="card-title h5 mb-0">${company.name}</h2>
+                                </div>
+                                <p class="card-text"><i class="bi bi-building me-2"></i>${company.industry}</p>
+                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>${company.location}</p>
+                                <p class="card-text"><i class="bi bi-briefcase me-2"></i>${company.openJobs} open jobs</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="company-details.html?id=${company.id}" class="btn btn-primary w-100">View Profile</a>
+                            </div>
+                        </div>
+                    `;
+                    companyList.appendChild(companyCard);
+                });
+            }
+
+            searchForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                displayCompanies(companies);
+            });
+
+            displayCompanies(companies);
+        });
+    </script>
+</body>
+</html>
