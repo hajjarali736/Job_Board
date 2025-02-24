@@ -12,7 +12,7 @@
     <header class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand" href="#">
-                 <a class="navbar-brand" href="#">JobSeeker</a>
+                 <a class="navbar-brand" href="index.html">JobSeeker</a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,40 +20,47 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="jobs.html">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Companies</a>
+                        <a class="nav-link" href="companies.html">Companies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about-us.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="#" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="#" class="btn btn-outline-secondary me-2">Register</a>
-                    <a href="#" class="btn btn-primary">Post a Job</a>
+                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="register.html" class="btn btn-outline-secondary me-2">Register</a>
+                    <a href="post-job.html" class="btn btn-primary">Post a Job</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero bg-light py-5">
-            <div class="container">
-                <h1 class="text-center mb-4">Find Your Dream Job</h1>
-                <div class="search-bar">
-                    <input type="text" class="form-control" placeholder="Job title, keywords, or company">
-                    <button class="btn btn-primary">Search</button>
-                </div>
-            </div>
-        </section>
+        <section class="hero position-relative text-white text-center d-flex align-items-center justify-content-center">
+    <video autoplay muted loop class="position-absolute w-100 h-100 object-fit-cover">
+        <source src="./assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay position-absolute w-100 h-100 bg-dark opacity-50"></div>
+    <div class="container position-relative">
+<h1 class="display-4 fw-bold text-white">Find Your Dream Job Today</h1>
+
+        <p class="lead mb-4">Explore thousands of opportunities from top companies worldwide.</p>
+        <div class="d-flex justify-content-center">
+            <input type="text" class="form-control w-50 me-2" placeholder="Job title, keywords, or company">
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</section>
 
         <div class="container mt-5">
             <div class="row">

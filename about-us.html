@@ -3,21 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Details - JobBoard</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { background-color: #F8F9FA; color: #212529; }
-        .btn-primary { background-color: #007BFF; border-color: #007BFF; }
-        .text-secondary { color: #6C757D !important; }
-        .border-secondary { border-color: #6C757D !important; }
-        .company-logo { max-width: 150px; }
-    </style>
+    <title>About Us - JobSeeker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
     <header class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light container">
             <a class="navbar-brand" href="#">
@@ -53,62 +44,57 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="container my-4">
-        <div id="jobDetails" class="card">
-            <div class="card-body">
-                <h2 id="jobTitle" class="h5"></h2>
-                <p id="jobCompany" class="text-secondary"></p>
-                <p id="jobLocation"><i class="fas fa-map-marker-alt"></i> <span></span></p>
-                <p id="jobDescription"></p>
-                <a href="#" class="btn btn-primary">Apply Now</a>
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h1>About JobSeeker</h1>
+            <p class="lead">Connecting talent with opportunity to build successful careers.</p>
+        </section>
+
+        <section class="row mb-5">
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p>At JobSeeker, our mission is to bridge the gap between job seekers and employers by providing a user-friendly, efficient, and transparent job search platform.</p>
             </div>
-        </div>
-
-        <!-- Company Information Section -->
-        <section class="mt-4">
-            <h3>Company Information</h3>
-            <div class="card">
-                <div class="card-body">
-
-                    <p><strong>About:</strong> TechCorp is a leading technology company specializing in innovative software solutions.</p>
-                    <a href="#" class="btn btn-link">Visit Company Website</a>
-                </div>
+            <div class="col-md-6">
+                <h2>Our Vision</h2>
+                <p>We envision a world where job seekers can find meaningful careers and employers can discover top talent effortlessly.</p>
             </div>
         </section>
 
-        <!-- Related Jobs Section -->
-        <aside class="mt-4">
-            <h3>Related Jobs</h3>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="job-details.html?jobIndex=1">Marketing Manager at BrandBoost</a></li>
-                <li class="list-group-item"><a href="job-details.html?jobIndex=2">UX Designer at DesignHub</a></li>
-                <li class="list-group-item"><a href="job-details.html?jobIndex=3">Data Scientist at DataInsights</a></li>
-            </ul>
-        </aside>
+        <section class="text-center mb-5">
+            <h2>Meet Our Team</h2>
+        </section>
+        
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card job-card">
+                    <img src="team1.jpg" class="card-img-top" alt="CEO">
+                    <div class="card-body">
+                        <h5 class="job-title">Jane Doe</h5>
+                        <p class="job-company">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card job-card">
+                    <img src="team2.jpg" class="card-img-top" alt="CTO">
+                    <div class="card-body">
+                        <h5 class="job-title">John Smith</h5>
+                        <p class="job-company">Chief Technology Officer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card job-card">
+                    <img src="team3.jpg" class="card-img-top" alt="CMO">
+                    <div class="card-body">
+                        <h5 class="job-title">Emily Johnson</h5>
+                        <p class="job-company">Chief Marketing Officer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <script src="./data/jobs-data.js"></script> <!-- Ensure jobOpenings is loaded -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const jobIndex = urlParams.get('jobIndex');
-
-            if (jobIndex !== null && jobOpenings && jobOpenings[jobIndex]) {
-                const job = jobOpenings[jobIndex];
-
-                document.getElementById('jobTitle').textContent = job.title;
-                document.getElementById('jobCompany').textContent = job.company;
-                document.getElementById('jobLocation').querySelector('span').textContent = job.location;
-                document.getElementById('jobDescription').textContent = job.description;
-            } else {
-                document.getElementById('jobDetails').innerHTML = `
-                    <div class="alert alert-danger">Job not found or invalid index.</div>
-                `;
-            }
-        });
-    </script>
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
@@ -140,5 +126,7 @@
             <p class="text-center mb-0">&copy; 2025 JobSeeker. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
