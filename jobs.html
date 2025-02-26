@@ -138,45 +138,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- additional script for bootstrap and mock data-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Jobs Data -->
     <script src="./data/jobs-data.js"></script>
-    <!-- Render Jobs -->
-<script>document.addEventListener('DOMContentLoaded', () => {
-    const jobListings = document.getElementById('jobListings');
-
-    jobOpenings.forEach((job, index) => {
-        const jobHTML = `
-            <article class="card mb-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div>
-                            <h2 class="h5 mb-1">${job.title}</h2>
-                            <p class="mb-1 text-secondary">${job.company}</p>
-                            <p class="mb-1"><i class="fas fa-map-marker-alt"></i> ${job.location}</p>
-                            ${job.description ? `<p class="mt-2">${job.description}</p>` : ''}
-                        </div>
-                        <button class="btn btn-primary btn-sm apply-btn" data-index="${index}">Apply Now</button>
-                    </div>
-                    <div class="mt-2 text-muted small">
-                        <time datetime="2023-08-01">Posted 2 days ago</time>
-                    </div>
-                </div>
-            </article>
-        `;
-        jobListings.insertAdjacentHTML('beforeend', jobHTML);
-    });
-
-    // Add event listener to dynamically generated "Apply Now" buttons
-    document.querySelectorAll('.apply-btn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const jobIndex = event.target.getAttribute('data-index');
-            window.location.href = `job-details.html?jobIndex=${jobIndex}`;
-        });
-    });
-});
-
-</script>
+<script src ="script.js"> </script>
 </body>
 </html>

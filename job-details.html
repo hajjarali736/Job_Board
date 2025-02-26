@@ -88,27 +88,6 @@
         </aside>
     </main>
 
-    <script src="./data/jobs-data.js"></script> <!-- Ensure jobOpenings is loaded -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const jobIndex = urlParams.get('jobIndex');
-
-            if (jobIndex !== null && jobOpenings && jobOpenings[jobIndex]) {
-                const job = jobOpenings[jobIndex];
-
-                document.getElementById('jobTitle').textContent = job.title;
-                document.getElementById('jobCompany').textContent = job.company;
-                document.getElementById('jobLocation').querySelector('span').textContent = job.location;
-                document.getElementById('jobDescription').textContent = job.description;
-            } else {
-                document.getElementById('jobDetails').innerHTML = `
-                    <div class="alert alert-danger">Job not found or invalid index.</div>
-                `;
-            }
-        });
-    </script>
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container">
@@ -141,4 +120,8 @@
         </div>
     </footer>
 </body>
+<!--additional script for mock data-->
+<script src="./data/jobs-data.js"></script> <!-- Ensure jobOpenings is loaded -->
+<script src = "script.js">    </script>
+
 </html>

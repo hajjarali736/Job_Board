@@ -81,7 +81,7 @@
         </section>
 
         <section id="company-list" class="row g-4">
-            <!-- Company profiles will be dynamically inserted here -->
+<!--            companies will be rendered here-->
         </section>
     </main>
 
@@ -98,43 +98,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./data/companies-data.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const companyList = document.getElementById("company-list");
-            const searchForm = document.getElementById("company-search-form");
-
-            function displayCompanies(companiesToShow) {
-                companyList.innerHTML = "";
-                companiesToShow.forEach((company) => {
-                    const companyCard = document.createElement("article");
-                    companyCard.className = "col-md-6 col-lg-4";
-                    companyCard.innerHTML = `
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="${company.logo}" alt="${company.name} logo" class="me-3" width="80" height="80">
-                                    <h2 class="card-title h5 mb-0">${company.name}</h2>
-                                </div>
-                                <p class="card-text"><i class="bi bi-building me-2"></i>${company.industry}</p>
-                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>${company.location}</p>
-                                <p class="card-text"><i class="bi bi-briefcase me-2"></i>${company.openJobs} open jobs</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <a href="company-details.html?id=${company.id}" class="btn btn-primary w-100">View Profile</a>
-                            </div>
-                        </div>
-                    `;
-                    companyList.appendChild(companyCard);
-                });
-            }
-
-            searchForm.addEventListener("submit", (e) => {
-                e.preventDefault();
-                displayCompanies(companies);
-            });
-
-            displayCompanies(companies);
-        });
-    </script>
+    <script src = "script.js"> </script> ;
 </body>
 </html>
