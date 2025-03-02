@@ -1,3 +1,4 @@
+// worked on by jad and ali
 document.addEventListener("DOMContentLoaded", () => {
   const featuredJobsList = document.getElementById("featured-jobs-list")
   const topCompaniesList = document.getElementById("top-companies-list")
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="job-company">${job.company}</p>
                     <p class="job-location">${job.location}</p>
                     <p>${job.description}</p>
-                    <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                    <a href="apply.html" class="btn btn-outline-primary">Apply Now</a>
                 </div>
             `
       featuredJobsList.appendChild(jobCard)
@@ -170,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p class="mb-1"><i class="fas fa-map-marker-alt"></i> ${job.location}</p>
                             ${job.description ? `<p class="mt-2">${job.description}</p>` : ''}
                         </div>
-                        <button class="btn btn-primary btn-sm apply-btn" data-index="${index}">Apply Now</button>
+                        <button class="btn btn-primary btn-sm apply-btn" data-index="${index}">Job details</button>
                     </div>
                     <div class="mt-2 text-muted small">
                         <time datetime="2023-08-01">Posted 2 days ago</time>

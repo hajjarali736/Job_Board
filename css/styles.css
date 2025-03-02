@@ -1,0 +1,123 @@
+/* worked on by jad and ali */
+
+/* General body styling */
+body {
+  background-color: #f8f9fa; /* Light gray background for a clean look */
+  color: #212529; /* Dark text for readability */
+}
+
+/* Navbar branding and links */
+.navbar-brand {
+  font-weight: bold; /* Make brand name stand out */
+  color: #007bff; /* Primary blue color */
+}
+
+.nav-link {
+  color: #6c757d; /* Muted gray for normal state */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Highlight effect on hover */
+}
+
+/* Hero section styling */
+.hero {
+  background-color: #f8f9fa; /* Matches body background */
+  padding: 80px 0; /* Adds spacing for better visual balance */
+}
+
+h1 {
+  color: #212529; /* Dark color for clear contrast */
+  font-weight: bold; /* Emphasize main heading */
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  max-width: 600px; /* Restrict width for better layout */
+  margin: 0 auto; /* Center the search bar */
+}
+
+.search-bar input {
+  border-top-right-radius: 0; /* Remove right radius for seamless button connection */
+  border-bottom-right-radius: 0;
+}
+
+.search-bar button {
+  border-top-left-radius: 0; /* Remove left radius to align with input field */
+  border-bottom-left-radius: 0;
+}
+
+/* Sections for job listings and companies */
+.featured-jobs,
+.top-companies {
+  margin-top: 40px; /* Adds space between sections */
+}
+
+/* Job and company card styles */
+.job-card,
+.company-card {
+  background-color: #ffffff; /* White background for contrast */
+  border: 1px solid #6c757d; /* Subtle border for structure */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 20px; /* Inner spacing */
+  margin-bottom: 20px; /* Space between cards */
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+.job-card:hover,
+.company-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow on hover */
+  transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Job and company text styling */
+.job-title,
+.company-name {
+  color: #007bff; /* Blue to highlight key names */
+  font-weight: bold;
+}
+
+.job-company,
+.company-industry {
+  color: #6c757d; /* Muted gray for secondary details */
+}
+
+.job-location {
+  color: #28a745; /* Green to indicate location visibility */
+}
+
+/* Job filter section */
+.job-filters h3 {
+  color: #007bff; /* Title color to match theme */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+.job-filters ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.job-filters ul li a {
+  color: #6c757d; /* Default muted color */
+}
+
+.job-filters ul li a:hover {
+  color: #007bff; /* Highlight filter links on hover */
+}
+
+/* Footer styling */
+footer {
+  color: #f8f9fa; /* Light text for dark background */
+}
+
+/* Social media icons */
+.social-icons a {
+  font-size: 1.2rem; /* Slightly larger for better visibility */
+  margin-right: 10px; /* Space between icons */
+}
+
+.social-icons a:hover {
+  color: #007bff !important; /* Change color on hover */
+}
+
+
